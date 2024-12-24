@@ -1,0 +1,121 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(to bottom, #6a11cb, #2575fc);
+    color: white;
+}
+
+.highlight {
+    color: #ffd700;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #ffd700;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #f0c400;
+}
+
+/* About Section */
+#about {
+    padding: 2rem;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+/* Skills Section */
+#skills {
+    padding: 2rem;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    margin: 1rem;
+    text-align: center;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 2rem;
+}
+
+.social-icons a {
+    color: #333;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem;
+}

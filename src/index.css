@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Animation Keyframes === */
+@keyframes mouth-top {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-45deg); }
+}
+
+@keyframes mouth-bottom {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(45deg); }
+}
+
+@keyframes dot-eat {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+}
+
+.animate-mouth-top {
+  animation: mouth-top 0.4s infinite ease-in-out;
+}
+
+.animate-mouth-bottom {
+  animation: mouth-bottom 0.4s infinite ease-in-out;
+}
+
+.animate-dot {
+  animation: dot-eat 1.2s infinite linear;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* === Base Theme === */
+:root {
+  --bg-from: #001f3f;
+  --bg-to: #00c6ff;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(to bottom, var(--bg-from), var(--bg-to));
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === Default Elements === */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, var(--bg-from), var(--bg-to));
+}
+
+a {
+  color: #3aa6ff;
+  text-decoration: none;
+}
+a:hover {
+  color: #6dbbff;
+}
+
+button {
+  @apply rounded-lg border border-transparent px-4 py-2 font-medium transition;
+  background-color: #1a1a1a;
+  color: white;
+}
+button:hover {
+  border-color: #3aa6ff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+    color: #111;
+  }
+}
+
